@@ -20,6 +20,8 @@ The plugin will lazy-initialize a comment modal if no options are passed, or if 
 
 ## Example usages
 
+I'll fill this out with more example as they start to exist.
+
 ```javascript
 /* 
  The following will add click events that attach to the element.
