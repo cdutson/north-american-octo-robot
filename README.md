@@ -65,13 +65,13 @@ Variations of the load command: (only runs when the modal is open)
 - [ ] $(el).commentModal('load', {json})
 - [ ] $(el).commentModal('load', {url:url, method:method, data:data})
 
-Variations of save command: (only runs when the modal is open)
-- [ ] $.commentModal('save') // returns a json object
-- [ ] $.commentModal('save', url)
-- [ ] $.commentModal('save', {url:url, method:method, data:data})
-- [ ] $(el).commentModal('save') // use values set on or with element
-- [ ] $(el).commentModal('save', url)
-- [ ] $(el).commentModal('save', {url:url, method:method, data:data})
+Variations of submit command: (only runs when the modal is open)
+- [ ] $.commentModal('submit') // returns a json object
+- [ ] $.commentModal('submit', url)
+- [ ] $.commentModal('submit', {url:url, method:method, data:data})
+- [ ] $(el).commentModal('submit') // use values set on or with element
+- [ ] $(el).commentModal('submit', url)
+- [ ] $(el).commentModal('submit', {url:url, method:method, data:data})
 
 Variations of the close command:
 - [ ] $.commentModal('close') // closes and scrubs the currently opened modal
@@ -84,19 +84,19 @@ These are all custom events announced by the modal that can be attached to exter
 - [ ] GA.CommentModal.postInit
 - [ ] GA.CommentModal.preDestroy
 - [ ] GA.CommentModal.postDestroy
-- [ ] GA.CommentModal.opening
-- [ ] GA.CommentModal.opened
-- [ ] GA.CommentModal.closing
-- [ ] GA.CommentModal.closed
-- [ ] GA.CommentModal.beforeLoad
-- [ ] GA.CommentModal.loaded
-- [ ] GA.CommentModal.beforeSubmit
-- [ ] GA.CommentModal.submitted
+- [ ] GA.CommentModal.preOpen
+- [ ] GA.CommentModal.postOpen
+- [ ] GA.CommentModal.preClose
+- [ ] GA.CommentModal.postClose
+- [ ] GA.CommentModal.preLoad
+- [ ] GA.CommentModal.postLoad
+- [ ] GA.CommentModal.preSubmit
+- [ ] GA.CommentModal.postSubmit
 - [ ] GA.CommentModal.error
 
 ## Custom Events
 These are functions you can inject in order to affect change directly within the modal
-- [ ] onSave - just before a save happens. use this to massage the data before it's sent
+- [ ] onSubmit - just before a save happens. use this to massage the data before it's sent
 - [ ] onLoad - just after data is loaded, but before rendering begins. use this to massage the returned json
 
 ### TODO
