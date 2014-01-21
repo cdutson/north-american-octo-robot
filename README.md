@@ -3,7 +3,7 @@ north-american-octo-robot
 
 This plugin is an answer for requiring comments on various portions of proejcts I work on. I wanted something that would:
 
- - easily display a comment modal
+ - easily display a comment modal (stand alone or with feed)
  - allow the comment modal to be loaded a variety of ways
  - pull in comments from a json feed
  - pull in comments from a passed-in json object
@@ -49,26 +49,35 @@ $('element').commentModal({'comment-template':'<li>{{comment}} - {{author}}</li>
 Fill this in as they start to exist
 
 ## Exposed functions
-Fill this in as they start to exist
 
 Variations of the open command:
-- [ ] $(el).commentModal('open') // use defaults
+- [ ] $.commentModal('open') // opens the default modal but doesn't do anything
 - [ ] $.commentModal('open', {options}, {jsonObj})
+- [ ] $(el).commentModal('open') // opens the modal for that element
 
 Variations of the load command: (only runs when the modal is open)
-- [ ] $(el).commentModal('load') // use defaults
+- [ ] $.commentModal('load', {json})
+- [ ] $.commentModal('load', {url:url, method:method, data:data})
+- [ ] $(el).commentModal('load') // use values set on or with element
 - [ ] $(el).commentModal('load', url)
-- [ ] $(el).commentModal('load', {url:url, method:method, data:data})
 - [ ] $(el).commentModal('load', {json})
+- [ ] $(el).commentModal('load', {url:url, method:method, data:data})
 
 Variations of save command: (only runs when the modal is open)
-- [ ] $(el).commentModal('save') // use defaults
+- [ ] $.commentModal('save') // returns a json object
+- [ ] $.commentModal('save', url)
+- [ ] $.commentModal('save', {url:url, method:method, data:data})
+- [ ] $(el).commentModal('save') // use values set on or with element
 - [ ] $(el).commentModal('save', url)
 - [ ] $(el).commentModal('save', {url:url, method:method, data:data})
-- [ ] $.commentModal('save') // returns a json object
-- [ ] $(el).commentModal('close')
 
-## Custom Events
+Variations of the close command:
+- [ ] $.commentModal('close') // closes and scrubs the currently opened modal
+- [ ] $(el).commentModal('close') // closes the modal for that element and scrubs it
+
+## Custom Events Hooks
+These are all custom events announced by the modal that can be attached to externally:
+
 - [ ] GA.CommentModal.preInit
 - [ ] GA.CommentModal.postInit
 - [ ] GA.CommentModal.preDestroy
@@ -82,6 +91,11 @@ Variations of save command: (only runs when the modal is open)
 - [ ] GA.CommentModal.beforeSubmit
 - [ ] GA.CommentModal.submitted
 - [ ] GA.CommentModal.error
+
+## Custom Events
+These are functions you can inject in order to affect change directly within the modal
+- [ ] onSave - just before a save happens. use this to massage the data before it's sent
+- [ ] onLoad - just after data is loaded, but before rendering begins. use this to massage the returned json
 
 ### TODO
 - [x] get a plugin layout that works
