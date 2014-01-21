@@ -1,7 +1,7 @@
 north-american-octo-robot
 =========================
 
-This plugin is an answer for requiring comments on various portions of proejcts I work on. I wanted something that would:
+This plugin is an answer for requiring comments on various portions of projects I work on. I wanted something that would:
 
  - easily display a comment modal (stand alone or with feed)
  - allow the comment modal to be loaded a variety of ways
@@ -100,6 +100,7 @@ These are functions you can inject in order to affect change directly within the
 ### TODO
 - [x] get a plugin layout that works
 - [ ] layout API structure
+- [ ] get default template HTML figured out
 - [ ] get Hogan integration working
 - [ ] get fetch code working
 - [ ] get post code working
