@@ -51,6 +51,13 @@ $('element').commentModal({'comment-template':'<li>{{comment}} - {{author}}</li>
 Fill this in as they start to exist
 
 ## Exposed functions
+Variations of initialization:
+- [ ] $.commentModal() // creates a default comment modal on the body
+- [ ] $.commentModal({options}) //override options, comment modal attached to body
+- [ ] $.commentModal({options}, $target) // override options, uses existing modal
+- [ ] $(el).commentModal() // default comment modal attached to element
+- [ ] $(el).commentModal({options}) // override options, attach to element
+- [ ] $(el).commentModal({options}, $target) // override options, attach to element, use target as modal
 
 Variations of the open command:
 - [ ] $.commentModal('open') // opens the default modal but doesn't do anything
