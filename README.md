@@ -65,7 +65,7 @@ Variations of the open command:
 - [ ] $(el).commentModal('open') // opens the modal for that element
 
 Variations of the load command: (only runs when the modal is open)
-- [ ] $.commentModal('load', {json})
+- [ ] $.commentModal('load', {json:json}) // json will take presidence 
 - [ ] $.commentModal('load', {url:url, method:method, data:data})
 - [ ] $(el).commentModal('load') // use values set on or with element
 - [ ] $(el).commentModal('load', url)
